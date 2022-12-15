@@ -16,21 +16,6 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = f'sqlite:///{os.path.join(basedir, "data.db")}'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    # Flask-Mail settings
-    MAIL_SERVER = 'smtp.mailtrap.io'
-    MAIL_PORT = 2525
-    MAIL_USERNAME = '02f8e167040c3d'
-    MAIL_PASSWORD = 'eb53bb82c96877'
-    MAIL_USE_TLS = True
-    MAIL_USE_SSL = False
-    MAIL_DEFAULT_SENDER = 'denissanturyan@gmail.com'
-
-    # Flask_dance OAuth configuration
-    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = '1'
-    OAUTHLIB_RELAX_TOKEN_SCOPE = 1
-    GOOGLE_OAUTH_CLIENT_ID = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
-    GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
-
     # Flask-User settings
     USER_APP_NAME = 'Hortensia'
     USER_ENABLE_EMAIL = True
