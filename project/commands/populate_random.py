@@ -12,6 +12,9 @@ gen = DocumentGenerator()  # used to generate random words and sentences
 
 
 def populate_with_random():
+    db.drop_all()  # warning: both populate_initial and populate_with_random clear the whole DB before running
+    db.create_all()
+
     populate_users()
     populate_emotions()
     populate_files()
